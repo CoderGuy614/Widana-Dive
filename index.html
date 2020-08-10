@@ -20,6 +20,12 @@
       href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+    integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ=="
+    crossorigin="anonymous"
+  />
     <title>Widana Dive Service</title>
   </head>
 
@@ -123,19 +129,51 @@
 
     <!-- Gallery Section -->
 
-    <section id="gallery" class="p-5">
+    <section id="gallery" class="py-5">
       <div class="container">
-        <div>
+        <h3 class="text-center mb-3">Photo Gallery</h3>
+        <div class='row mb-4'>
           <div class="col-md-4">
-            <img src="img/pic2.png" alt="animal">
+            <a href="img/pic2.png" data-toggle='lightbox' data-gallery='img-gallery' data-height='560' data-width='560'>
+              <img class='img-fluid' src="img/pic2.png" alt="animal">
+            </a>
+            
           </div>
           <div class="col-md-4">
-            <img src="img/pic3.jpg" alt="animal">
+            <a href="img/pic3.jpg" data-toggle='lightbox' data-gallery='img-gallery' data-height='560' data-width='560'>
+              <img class='img-fluid' src="img/pic3.jpg" alt="animal">
+            </a>
+            
           </div>
           <div class="col-md-4">
-            <img src="img/pic4.jpg" alt="animal">
+            <a href="img/pic4.jpg" data-toggle='lightbox' data-gallery='img-gallery' data-height='560' data-width='560'>
+            <img class='img-fluid' src="img/pic4.jpg" alt="animal">
+            </a>
           </div>
         </div>
+
+        <!-- Row 2 -->
+
+        <div class='row mb-4'>
+          <div class="col-md-4">
+            <a href="img/pic8.png" data-toggle='lightbox' data-gallery='img-gallery' data-height='560' data-width='560'>
+              <img class='img-fluid' src="img/pic8.png" alt="animal">
+            </a>
+            
+          </div>
+          <div class="col-md-4">
+            <a href="img/pic9.png" data-toggle='lightbox' data-gallery='img-gallery' data-height='560' data-width='560'>
+              <img class='img-fluid' src="img/pic9.png" alt="animal">
+            </a>
+            
+          </div>
+          <div class="col-md-4">
+            <a href="img/pic10.jpg" data-toggle='lightbox' data-gallery='img-gallery' data-height='560' data-width='560'>
+            <img class='img-fluid' src="img/pic10.jpg" alt="animal">
+            </a>
+          </div>
+        </div>
+        
           
         </div>
       </div>
@@ -173,6 +211,18 @@
     <script>
       // Get the current year for the copyright
       $("#year").text(new Date().getFullYear());
+            // Lightbox init
+            $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
     </script>
+        
+        </script>
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"
+        integrity="sha512-YibiFIKqwi6sZFfPm5HNHQYemJwFbyyYHjrr3UT+VobMt/YBo1kBxgui5RWc4C3B4RJMYCdCAJkbXHt+irKfSA=="
+        crossorigin="anonymous"
+      ></script>
   </body>
 </html>
