@@ -39,6 +39,7 @@
           class="navbar-toggler"
           data-target="#navbarCollapse"
           data-toggle="collapse"
+          data-offset='20%'
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -240,6 +241,14 @@
             });
     </script>
         
+        <script>
+          $(document).ready(function(){
+              $(".dropdown-menu").on("shown.bs.dropdown", function(e){
+                  alert("Dropdown")
+              });
+          });
+          </script>
+
         </script>
         <script
         src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"
